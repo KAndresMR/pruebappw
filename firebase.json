@@ -1,0 +1,39 @@
+{
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+
+  "hosting": {
+    "source": "./path-to-your-angular-workspace"
+  },
+
+
+  
+    "prerender": {
+      "builder": "@nguniversal/builders:prerender",
+      "options": {
+        "routes": [
+          "/",
+          "ANOTHER_ROUTE",
+          "AND_ANOTHER"
+        ]
+      },
+      "configurations": {
+      },
+      "defaultConfiguration": "production"
+  },
+  
+    "deploy": {
+      "builder": "@angular/fire:deploy",
+      "options": {
+        "browserTarget": "app:build:production",
+        "serverTarget": "app:server:production",
+        "prerenderTarget": "app:prerender:production"
+      }
+    
+  }
+
+
+
+}
