@@ -1,0 +1,77 @@
+/* Estilos generales para formularios */
+form {
+    display: grid;
+    gap: 15px;
+  }
+  
+  form div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form label {
+    font-size: 16px;
+    color: #444;
+  }
+  
+  form input,
+  form select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  /* Estilo básico para los inputs */
+  .input-field {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background: linear-gradient(to right, #e0f7fa, #ffffff);
+  }
+  
+  /* Efecto de difuminado de colores */
+  .input-field:focus {
+    border-color: #ff6f61;
+    box-shadow: 0 0 8px 4px rgba(255, 111, 97, 0.7);
+    background: white;
+  }   
+  
+  /* Botón de agregar curso */
+  #add-task-form button {
+    background-color: #ff9800;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  #add--form button:hover {
+    background-color: #fb8c00;
+    transform: scale(1.05);
+  }
+  
+  /* Estilos para el overlay y mensaje de éxito */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.5s ease-out, fadeOut 0.5s ease-in 1.5s;
+    pointer-events: none;
+  }
+  
+  

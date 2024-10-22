@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Tarea</title>
+</head>
+
+<body>
+
+    <!-- Contenido de la página de agregar tarea -->
+    <main>
+        <section id="add-task">
+            <h1>Agregar Nuevo Tarea</h1>
+            <form (ngSubmit)="addTask()" id="add-task-form" #cursoForm="ngForm">
+                <!-- Campo para el nombre de la tarea -->
+                <div>
+                    <label for="task-name">Nombre de la tarea:</label><br>
+                    <input class="input-field" type="text" id="nameTask" name="task-name" [(ngModel)] = "taskName">
+                </div>
+
+                <!-- Campo para la descripción del tarea -->
+                <div>
+                    <label for="description">Descripción:</label><br>
+                    <input class="input-field" type="text" id="description" name="description-name" [(ngModel)] = "taskDescription">
+                </div>
+
+                <button type="submit" class="btnAddTask">Agregar Tarea</button>
+            </form>
+
+        </section>
+    </main>
+</body>
+</html>
